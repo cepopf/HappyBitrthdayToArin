@@ -1,0 +1,69 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #f5d6e3, #ffebfa); /* สีพาสเทลกราเดียนท์ */
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header h1 {
+    color: #ff7aed; /* สีชมพูพาสเทล */
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.message p {
+    font-size: 1.5em;
+    color: #000000; /* สีม่วงพาสเทล */
+    margin-bottom: 30px;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap; /* ทำให้รูปภาพยืดหยุ่นและสามารถแยกแถวได้ */
+    justify-content: center; /* จัดตำแหน่งรูปภาพให้อยู่ตรงกลางทั้งหมด */
+    gap: 10px; /* ลดระยะห่างระหว่างรูปภาพ */
+    margin-bottom: 30px;
+}
+
+.photo {
+    flex-basis: 45%; /* ทำให้รูปภาพแต่ละรูปมีขนาดครึ่งหนึ่งของแถว */
+    display: flex;
+    justify-content: center; /* จัดตำแหน่งรูปภาพให้อยู่กลางในแนวนอน */
+    align-items: center; /* จัดตำแหน่งรูปภาพให้อยู่กลางในแนวตั้ง */
+    height: 200px; /* กำหนดความสูงของแต่ละ photo เพื่อให้รูปมีขนาดสี่เหลี่ยมจัตุรัส */
+}
+
+.photo img {
+    width: 100%; /* ให้รูปภาพขยายเต็มขนาดของ div */
+    height: 100%; /* ให้สูงเท่ากับความกว้างเพื่อให้เป็นสี่เหลี่ยมจัตุรัส */
+    max-width: 200px; /* ขนาดสูงสุด */
+    max-height: 200px; /* ขนาดสูงสุด */
+    border-radius: 15px; /* กรอบโค้งมน */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover; /* ให้รูปภาพครอบคลุมพื้นที่ */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo img:hover {
+    transform: rotate(10deg) scale(1.1); /* หมุนและขยายรูป */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
+}
+
+footer p {
+    font-size: 1.2em;
+    color: #000000; /* สีม่วงพาสเทล */
+    margin-top: 30px;
+}
